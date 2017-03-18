@@ -1,9 +1,11 @@
 from tesco_product_accumulator import download_all
 from product import Product
 
-# Product.drop_table()
-# Product.create_table()
+def reset_table():
+    Product.drop_table()
+    Product.create_table()
 
-download_all()
+def findAll():
+    return Product.select()
 
-print ""
+
