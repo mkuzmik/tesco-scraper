@@ -1,5 +1,6 @@
 import peewee
 import time
+import datetime
 from peewee import *
 
 sql_database = SqliteDatabase('my_app.db')
@@ -20,6 +21,13 @@ class Product(peewee.Model):
     #     self.price_per_kg = price_per_kg
     #     self.link = link
     #     self.timestamp = timestamp
+
+    def get_date_in_string(self):
+        return datetime.datetime.fromtimestamp(self.timestamp).strftime('%Y-%m-%d')
+
+    def __unicode__(self):
+        return self.name + "  " + str(self.unit_price) + "zl   -" + str(self.promo) + "%   " + str(self.price_per_kg)\
+               + "zl/unit   " + self.link + "    " + self.get_date_in_string()
 
     class Meta:
         database = sql_database

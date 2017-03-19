@@ -1,11 +1,8 @@
-from tesco_product_accumulator import download_all
-from product import Product
+from product_service import *
+import pandas as pd
 
-def reset_table():
-    Product.drop_table()
-    Product.create_table()
+bananas = pd.Series(find_by_name('banan'))
 
-def findAll():
-    return Product.select()
+print bananas[2]
 
-
+ type(bananas)
