@@ -18,3 +18,6 @@ def find_by_name(name):
 def print_result(result):
     for prod in result:
         print prod
+
+def find_promo_grower_than(percent):
+    return Product.select().where(Product.promo > percent)

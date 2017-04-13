@@ -1,8 +1,5 @@
 from product_service import *
 import pandas as pd
+from product import Product
 
-bananas = pd.Series(find_by_name('banan'))
-
-print bananas[2]
-
- type(bananas)
+for prod in Product.select().where()
