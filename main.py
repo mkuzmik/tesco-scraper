@@ -1,5 +1,14 @@
-from product_service import *
-import pandas as pd
-from product import Product
+from product.product_service import *
 
-for prod in Product.select().where()
+def show(products, max = 20):
+    for prod in products:
+        print prod
+        max -= 1
+        if max == 0:
+            break
+    return
+
+print len(get_latest_products_with_promo_sorted())
+show(get_latest_products_with_promo_sorted())
+
+

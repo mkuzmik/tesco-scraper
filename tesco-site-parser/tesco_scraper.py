@@ -1,7 +1,10 @@
-import urllib
 import time
+import urllib
+
 from bs4 import BeautifulSoup
-from product import Product
+
+from product.product import Product
+
 
 def get_soup_from(link):
     page = urllib.urlopen(link).read()
@@ -22,7 +25,7 @@ def get_price_per_kg_from(product_soup):
     return price
 
 def get_unit_price_from(product_soup):
-    price_soup = product_soup.find(attrs={"class": "price-control-wrapper clearfix"})
+    price_soup = product_soup.find(attrs={"class": "price-control-wrapper"})
     price_str = price_soup.find(attrs={"class" : "value"}).string
     price_str = price_str.replace(" ", "")
     price_str = price_str.replace(",", ".")

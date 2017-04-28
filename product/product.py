@@ -23,7 +23,7 @@ class Product(peewee.Model):
     #     self.timestamp = timestamp
 
     def get_date_in_string(self):
-        return datetime.datetime.fromtimestamp(self.timestamp).strftime('%Y-%m-%d')
+        return datetime.datetime.fromtimestamp(self.timestamp).strftime('%Y/%m/%d')
 
     def __unicode__(self):
         return self.name + "  " + str(self.unit_price) + "zl   -" + str(self.promo) + "%   " + str(self.price_per_kg)\

@@ -1,5 +1,5 @@
 from tesco_scraper import get_all_products_from
-from product import Product
+
 
 def save_to_db_products_from(department_link):
     print "Crawling through ", department_link," ."
@@ -29,3 +29,4 @@ def download_all():
         save_to_db_products_from(link)
     return
 
+download_all()
