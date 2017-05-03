@@ -1,6 +1,6 @@
 # CREATE NEW FUNCTIONALITY THAT ALLOWS GETTING LATEST PROMOTIONS AND DEPLOY IT IN THE WEB
 
 DONE ## implement function that gets latest products with any promo > 0  from database (sorted desc)
-## write a script which gets product from function above and parse it int HTML string
-## script that created HTML file in github.io folder
+DONE ## write a script which gets product from function above and parse it into HTML string
+DONE ## script that create HTML index file in github.io folder
 ## and finally bash script to commit and push github.io repo
